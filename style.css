@@ -1,0 +1,157 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+}
+
+.card {
+    background: white;
+    padding: 35px 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+
+.icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #1e293b;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    display: flex;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.input-group button {
+    border: none;
+    background: #e2e8f0;
+    padding: 0 15px;
+    cursor: pointer;
+    color: #334155;
+}
+
+#checkBtn {
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#checkBtn:hover {
+    background: #1d4ed8;
+}
+
+#checkBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.loading {
+    margin-top: 25px;
+    color: #475569;
+}
+
+.spinner {
+    width: 35px;
+    height: 35px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #2563eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto auto 12px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.result {
+    margin-top: 22px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.safe {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.danger {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.error {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.hidden {
+    display: none;
+}
+
+.privacy {
+    margin-top: 25px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 25px 18px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+}

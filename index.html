@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Breach Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="icon">🔐</div>
+
+            <h1>Password Breach Checker</h1>
+
+            <p class="subtitle">
+                Check whether your password has appeared
+                in any known data breaches.
+            </p>
+
+            <form id="passwordForm">
+                <div class="input-group">
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                        autocomplete="off"
+                    >
+
+                    <button type="button" id="togglePassword">
+                        Show
+                    </button>
+                </div>
+
+                <button type="submit" id="checkBtn">
+                    Check Password
+                </button>
+            </form>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Checking password security...</p>
+            </div>
+
+            <div id="result" class="result hidden"
+                 role="status" aria-live="polite"></div>
+
+            <p class="privacy">
+                🔒 Your actual password is never sent to the API.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
